@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/Fixtures/FootballAnalyticsProject.Fixtures.Api/FootballAnalyticsProject.Fixtures.Api.csproj" Id="03cd06d7-b66d-4e80-99c0-20f9919fb54a" />
+  <Project Path="src/Fixtures/FootballAnalyticsProject.Fixtures.Application/FootballAnalyticsProject.Fixtures.Application.csproj" Id="7556b814-01d5-4058-8350-19aa54770bba" />
+  <Project Path="src/Fixtures/FootballAnalyticsProject.Fixtures.Domain/FootballAnalyticsProject.Fixtures.Domain.csproj" Id="a0a994c6-a01a-4ec5-8dc9-0635bfcb8ed3" />
+  <Project Path="src/Fixtures/FootballAnalyticsProject.Fixtures.Infrastructure/FootballAnalyticsProject.Fixtures.Infrastructure.csproj" Id="5b376b14-b649-4065-bd59-c89a6b97f7b4" />
+</Solution>
