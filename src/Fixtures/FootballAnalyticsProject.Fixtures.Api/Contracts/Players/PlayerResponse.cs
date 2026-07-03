@@ -1,4 +1,4 @@
-﻿namespace FootballAnalyticsProject.Fixtures.Api.Contracts.Player
+﻿namespace FootballAnalyticsProject.Fixtures.Api.Contracts.Players
 {
     public class PlayerResponse
     {
