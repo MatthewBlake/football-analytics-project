@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FootballAnalyticsProject.Fixtures.Domain\FootballAnalyticsProject.Fixtures.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
