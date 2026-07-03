@@ -38,5 +38,25 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
 
             return Ok(result);
         }
+
+        //TODO: Come back later once storage is implemented
+        //[HttpPut]
+        //[Route("api/v1/[controller]/{id}")]
+        //public ActionResult<TeamResponse> PutTeam(UpdateTeamRequest request)
+        //{
+        //    Team team = new Team
+        //    {
+        //        TeamName = request.TeamName,
+        //        TeamColour = request.TeamColour
+        //    };
+
+        //    TeamResponse result = new TeamResponse
+        //    {
+        //        TeamName = request.TeamName,
+        //        TeamColour = request.TeamColour
+        //    };
+
+        //    return Ok(result);
+        //}
     }
 }
