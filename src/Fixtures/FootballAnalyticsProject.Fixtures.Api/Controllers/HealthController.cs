@@ -1,6 +1,5 @@
 ﻿using FootballAnalyticsProject.Fixtures.Api.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json.Nodes;
 
 namespace FootballAnalyticsProject.Fixtures.Api.Controllers
 {
