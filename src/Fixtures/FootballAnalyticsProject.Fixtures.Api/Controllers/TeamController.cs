@@ -7,15 +7,29 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
     [ApiController]
     public class TeamController : ControllerBase
     {
+        private readonly TeamStore _teamStore;
+
+        public TeamController(TeamStore teamStore)
+        {
+            _teamStore = teamStore;
+        }
+
         [HttpGet]
         [Route("api/v1/[controller]")]
-        public ActionResult<TeamResponse> GetTeam()
+        public ActionResult<List<TeamResponse>> GetTeam()
         {
-            TeamResponse result = new TeamResponse()
+            List<TeamResponse> result = new List<TeamResponse>();
+            foreach (Team team in _teamStore.teamList)
             {
-                TeamName = "Chelsea",
-                TeamColour = "Blue"
-            };
+                TeamResponse teamResponse = new TeamResponse
+                { 
+                    TeamName = team.TeamName,
+                    TeamColour = team.TeamColour
+                };
+
+
+                result.Add(teamResponse);
+            }
             return Ok(result);
         }
 
@@ -29,6 +43,8 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
                 TeamName = request.TeamName,
                 TeamColour = request.TeamColour
             };
+
+            _teamStore.teamList.Add(team);
 
             TeamResponse result = new TeamResponse
             {
