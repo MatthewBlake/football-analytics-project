@@ -1,3 +1,4 @@
+using FootballAnalyticsProject.Fixtures.Api.Contracts.Player;
 using FootballAnalyticsProject.Fixtures.Api.Contracts.Teams;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +6,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<TeamStore>();
+builder.Services.AddSingleton<PlayerStore>();
 
 var app = builder.Build();
 
