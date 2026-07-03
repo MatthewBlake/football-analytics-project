@@ -2,8 +2,17 @@
 {
     public class Team
     {
-        public required string TeamName { get; set; }
+        public Team(string name, string colour) 
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+            Colour = colour;
+        }
 
-        public required string TeamColour { get; set; }
+        public Guid Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Colour { get; set; }
     }
 }

@@ -23,8 +23,9 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
             {
                 TeamResponse teamResponse = new TeamResponse
                 { 
-                    TeamName = team.TeamName,
-                    TeamColour = team.TeamColour
+                    Id = team.Id,
+                    Name = team.Name,
+                    Colour = team.Colour
                 };
 
 
@@ -38,18 +39,15 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
         [Route("api/v1/[controller]")]
         public ActionResult<TeamResponse> PostTeam(CreateTeamRequest request)
         {
-            Team team = new Team
-            {
-                TeamName = request.TeamName,
-                TeamColour = request.TeamColour
-            };
+            Team team = new Team(request.Name, request.Colour);
 
             _teamStore.teamList.Add(team);
 
             TeamResponse result = new TeamResponse
             {
-                TeamName = request.TeamName,
-                TeamColour = request.TeamColour
+                Id = team.Id,
+                Name = request.Name,
+                Colour = request.Colour
             };
 
             return Ok(result);

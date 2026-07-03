@@ -2,8 +2,10 @@
 {
     public class TeamResponse
     {
-        public required string TeamName { get; set; }
+        public Guid Id { get; set; }
 
-        public required string TeamColour { get; set; }
+        public required string Name { get; set; }
+
+        public required string Colour { get; set; }
     }
 }

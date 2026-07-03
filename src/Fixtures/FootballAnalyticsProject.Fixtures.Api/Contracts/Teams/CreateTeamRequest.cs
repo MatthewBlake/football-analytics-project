@@ -2,8 +2,8 @@
 {
     public class CreateTeamRequest
     {
-        public required string TeamName { get; set; }
+        public required string Name { get; set; }
 
-        public required string TeamColour { get; set; }
+        public required string Colour { get; set; }
     }
 }
