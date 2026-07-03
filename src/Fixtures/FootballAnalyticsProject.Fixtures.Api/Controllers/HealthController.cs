@@ -10,8 +10,10 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
         [Route("api/v1/[controller]")]
         public ActionResult<HealthResponse> GetHealth()
         {
-            HealthResponse result = new HealthResponse();
-            result.Status = "Healthy";
+            HealthResponse result = new HealthResponse() 
+            { 
+                Status = "Healthy"
+            };
             return Ok(result);
         }
     }
