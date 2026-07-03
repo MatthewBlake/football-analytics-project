@@ -11,9 +11,11 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
         [Route("api/v1/[controller]")]
         public ActionResult<TeamResponse> GetTeam()
         {
-            TeamResponse result = new TeamResponse();
-            result.TeamName = "Chelsea";
-            result.TeamColour = "Blue";
+            TeamResponse result = new TeamResponse()
+            {
+                TeamName = "Chelsea",
+                TeamColour = "Blue"
+            };
             return Ok(result);
         }
 
