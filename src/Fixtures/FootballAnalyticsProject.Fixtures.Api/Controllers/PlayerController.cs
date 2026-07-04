@@ -1,4 +1,4 @@
-﻿using FootballAnalyticsProject.Fixtures.Api.Contracts.Player;
+﻿using FootballAnalyticsProject.Fixtures.Api.Contracts.Players;
 using FootballAnalyticsProject.Fixtures.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,6 +40,8 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
         public ActionResult<PlayerResponse> PostPlayer(CreatePlayerRequest request)
         {
             Player player = new Player(request.TeamId, request.ShirtNumber);
+
+            _playerStore.playerList.Add(player);
 
             PlayerResponse result = new PlayerResponse
             {
