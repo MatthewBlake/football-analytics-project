@@ -15,8 +15,7 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
             _playerStore = playerStore;
         }
 
-        [HttpGet]
-        [Route("api/v1/[controller]")]
+        [HttpGet("api/v1/[controller]")]
         public ActionResult<List<PlayerResponse>> GetPlayers()
         {
             List<PlayerResponse> result = new List<PlayerResponse>();
@@ -35,8 +34,7 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Route("api/v1/[controller]")]
+        [HttpPost("api/v1/[controller]")]
         public ActionResult<PlayerResponse> PostPlayer(CreatePlayerRequest request)
         {
             Player player = new Player(request.TeamId, request.ShirtNumber);

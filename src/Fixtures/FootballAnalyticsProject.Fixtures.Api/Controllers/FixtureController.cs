@@ -15,8 +15,7 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
             _fixtureStore = fixtureStore;
         }
 
-        [HttpGet]
-        [Route("api/v1/[controller]")]
+        [HttpGet("api/v1/[controller]")]
         public ActionResult<FixtureResponse> GetFixtures()
         {
             List<FixtureResponse> result = new List<FixtureResponse>();
@@ -35,8 +34,7 @@ namespace FootballAnalyticsProject.Fixtures.Api.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Route("api/v1/[controller]")]
+        [HttpPost("api/v1/[controller]")]
         public ActionResult<FixtureResponse> PostFixture(CreateFixtureRequest request)
         {
             Fixture fixture = new Fixture(request.HomeTeam, request.AwayTeam, request.Stadium, request.KickOffTime);
