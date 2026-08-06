@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './features/home/home'
 import { Teams } from './features/teams/teams'
+import { Fixtures } from './features/fixtures/fixtures'
 
 export const routes: Routes = [
   {
@@ -10,5 +11,9 @@ export const routes: Routes = [
   {
     path: 'teams',
     component: Teams
+  },
+  {
+    path: 'fixtures',
+    component: Fixtures
   }
 ];
