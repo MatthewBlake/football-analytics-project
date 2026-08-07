@@ -15,4 +15,10 @@ export class Teams {
     { id: 3, name: "Arsenal" },
     { id: 4, name: "Newcastle" }
   ]
+
+  selectedTeam: Team | null = null;
+
+  selectTeam(team: Team) {
+    this.selectedTeam = team;
+  }
 }
