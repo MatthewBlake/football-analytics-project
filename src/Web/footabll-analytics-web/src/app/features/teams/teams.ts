@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Team } from './team'
 
 @Component({
   selector: 'app-teams',
@@ -6,8 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './teams.html',
   styleUrl: './teams.scss',
 })
+
 export class Teams {
-  teams = [
+  teams: Team[] = [
     { id: 1, name: "Chelsea" },
     { id: 2, name: "Liverpool" },
     { id: 3, name: "Arsenal" },
