@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
-import { Home } from './features/home/home'
-import { Teams } from './features/teams/teams'
-import { Fixtures } from './features/fixtures/fixtures'
+import { Home } from './features/home/home';
+import { Teams } from './features/teams/teams';
+import { Fixtures } from './features/fixtures/fixtures';
+import { LeagueTable } from './features/league-table/league-table'
 
 export const routes: Routes = [
   {
@@ -15,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'fixtures',
     component: Fixtures
+  },
+  {
+    path: 'leaugetable',
+    component: LeagueTable
   }
 ];
