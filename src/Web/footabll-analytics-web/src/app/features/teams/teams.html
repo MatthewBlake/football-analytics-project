@@ -1,0 +1,7 @@
+@for (team of teams; track team.id){
+  <li (click)="selectTeam(team)">{{team.name}}</li>
+}
+
+@if(selectedTeam){
+  <p>Selected Team: {{selectedTeam.name}}</p>
+}
