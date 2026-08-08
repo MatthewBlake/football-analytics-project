@@ -1,7 +1,12 @@
-@for (team of teams; track team.id){
+@for (team of teams(); track team.id){
   <li (click)="selectTeam(team)">{{team.name}}</li>
 }
 
 @if(selectedTeam){
   <p>Selected Team: {{selectedTeam.name}}</p>
 }
+
+<form [formGroup]="teamForm">
+  <input formControlName="name">
+  <input formControlName="colour">
+</form>

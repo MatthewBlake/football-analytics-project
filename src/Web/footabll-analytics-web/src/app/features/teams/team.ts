@@ -1,4 +1,5 @@
 export interface Team {
-  id: number;
+  id: string;
   name: string;
+  colour: string;
 }
