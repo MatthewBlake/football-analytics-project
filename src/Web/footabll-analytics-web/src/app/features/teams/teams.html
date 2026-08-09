@@ -6,7 +6,9 @@
   <p>Selected Team: {{selectedTeam.name}}</p>
 }
 
-<form [formGroup]="teamForm">
+<form [formGroup]="teamForm" (ngSubmit)="onSubmit()")>
   <input formControlName="name">
   <input formControlName="colour">
+
+  <button type="submit">Create Team</button>
 </form>
